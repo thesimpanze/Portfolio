@@ -19,7 +19,7 @@ const Popup = () => {
           style={{ width, height }}
           className="bg-white text-primary font-grotesk flex justify-center items-center"
         >
-          Something special for u.
+          Recently project.
         </motion.div>
       </div>
     </section>

@@ -1,12 +1,17 @@
-import { ArrowDown } from "lucide-react";
 import HoverMe from "../components/hover";
 import { useState } from "react";
-import { AnimatePresence, motion } from "motion/react";
+import { AnimatePresence, motion, useScroll, useTransform } from "motion/react";
 import PopupImg from "../components/PopupImg";
 
 const Welcome = () => {
   const [show, setShow] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
+  const {scrollY} = useScroll()
+  const imgY = useTransform(scrollY, (y) => {
+    const startScroll = window.innerHeight;
+    if (y < startScroll) return -(y - startScroll) * 0.4;
+    return -(y - startScroll) * 0.25;
+  });
   return (
     <div className="h-[100vh] bg-black relative">
       <AnimatePresence>
@@ -30,6 +35,7 @@ const Welcome = () => {
       <HoverMe text="Click me!">
         <div className="flex justify-center items-end h-screen absolute w-fit top-0 left-1/2 -translate-x-1/2 cursor-pointer">
           <motion.img
+            style={{y:imgY}}
             src="/ava-removebg-preview.png"
             alt=""
             className="h-[90%] object-contain"

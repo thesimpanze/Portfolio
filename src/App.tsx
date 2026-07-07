@@ -35,7 +35,7 @@ function App() {
         <div className="fixed top-0 left-0 w-full h-full -z-10">
           <Hero />
         </div>
-        <div className="h-[250vh]">
+        <div className="h-[225vh]">
           <div className="h-[100vh]"></div>
           <div className="sticky top-0">
             <Welcome />

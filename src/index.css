@@ -1,10 +1,13 @@
-@import url("https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Copse&family=Host+Grotesk:ital,wght@0,300..800;1,300..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montenegrin+Gothic+One&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+BE+VLG:wght@100..400&family=Yuyu&display=swap');
 @import "tailwindcss";
 
 @theme {
  
     --font-grotesk: Host Grotesk, "sans-serif";
     --font-playfair: "Playfair Display", "serif";
+    --font-Archivo: "Archivo Black", "sans-serif";
+    --font-Playwrite: "Playwrite BE VLG", "serif";
+    --font-syne: "Syne", "sans-serif";
     --color-primary: #000000;
  
 }
