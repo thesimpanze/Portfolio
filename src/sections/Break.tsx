@@ -70,7 +70,7 @@ const Break = () => {
           <span className="word-finished ">finished</span>
           <span className="word-calculator ">watching</span>
           <span className="word-pro ">the</span>
-          <span className="word-end ">memories?</span>
+          <span className="word-end ">projects?</span>
         </motion.h1>
       </div>
       

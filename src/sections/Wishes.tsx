@@ -25,7 +25,7 @@ const Wishes = () => {
           style={{ y, scale, x }}
           className="text-white text-6xl font-bold text-center origin-center"
         >
-          The Wishes.
+          The Skills.
         </motion.h1>
       </div>
       <div className=" h-screen w-full flex justify-center items-center sticky top-0">

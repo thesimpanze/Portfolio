@@ -24,7 +24,7 @@ const SpecialGift = () => {
       <div className="h-screen bg-white flex items-center justify-center flex-col text-primary">
         <h1 className="font-semibold text-2xl  leading-none">
           <BlurText
-            text="You're Invited to."
+            text="Get in touch."
             animateBy="words"
             direction="bottom"
             threshold={1}
@@ -32,11 +32,11 @@ const SpecialGift = () => {
         </h1>
         <h1 className="font-bold text-9xl font-playfair  italic leading-none">
           <ShinyText
-            text="Birthday Date"
+            text="Let's Collaborate"
             speed={3}
             delay={0}
-            color="#f56476"
-            shineColor="#f9a3ae"
+            color="#000000"
+            shineColor="#525252"
             spread={120}
             direction="left"
             yoyo={false}
