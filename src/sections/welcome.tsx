@@ -4,7 +4,6 @@ import { AnimatePresence, motion, useScroll, useTransform } from "motion/react";
 import PopupImg from "../components/PopupImg";
 
 const Welcome = () => {
-  const [show, setShow] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
   const {scrollY} = useScroll()
   const imgY = useTransform(scrollY, (y) => {
