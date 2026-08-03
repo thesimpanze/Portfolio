@@ -10,8 +10,8 @@ const Wishes = () => {
     offset: ["center end", "end end"],
   });
 
-  const y = useTransform(scrollYProgress, [0, 0.4, 1], ["0%", "0%", "-35vh"]);
-  const x = useTransform(scrollYProgress, [0, 0.4, 1], ["0%", "0%", "-33vw"]);
+  const y = useTransform(scrollYProgress, [0, 0.4, 1], ["0%", "0%", "-30vh"]);
+  const x = useTransform(scrollYProgress, [0, 0.4, 1], ["0%", "0%", "-31vw"]);
 
   const scale = useTransform(scrollYProgress, [0, 0.4, 1], [1, 1, 0.6]);
 
@@ -25,7 +25,7 @@ const Wishes = () => {
           style={{ y, scale, x }}
           className="text-white text-6xl font-bold text-center origin-center"
         >
-          The Skills.
+          Recently Use.
         </motion.h1>
       </div>
       <div className=" h-screen w-full flex justify-center items-center sticky top-0">
@@ -38,11 +38,11 @@ const Wishes = () => {
             textClassName="text-white"
             wordAnimationEnd="center center"
           >
-            On your 21st birthday, I hope your life blooms even more
-            beautifully. May success follow every step you take, may your heart
-            always be filled with grateful, and may you be wrapped in endless
-            blessings. I pray that every road leading to your dreams is gentle
-            and kind to you, my love.
+            I shape ideas into interfaces with React and Next.js, giving
+            structure and speed to what once was just a sketch in Figma.
+            Tailwind CSS helps me style faster without losing precision, while
+            TypeScript and Laravel keep everything honest, tidy, and working as
+            it should.
           </ScrollReveal>
         </div>
       </div>
