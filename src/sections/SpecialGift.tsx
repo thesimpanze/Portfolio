@@ -2,6 +2,8 @@ import { motion, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
 import ShinyText from "../components/ShinyText";
 import BlurText from "../components/BlurText";
+import { FiGithub } from "react-icons/fi";
+import { TiSocialLinkedin } from "react-icons/ti";
 
 const SpecialGift = () => {
   const ref = useRef(null);
@@ -14,7 +16,7 @@ const SpecialGift = () => {
     <div className="">
       <div className="h-[150vh] bg-primary relative" ref={ref}>
         <div className="h-screen flex items-center justify-center text-white text-5xl font-bold leading-2 sticky top-0 overflow-hidden">
-          Last But Not Least
+          How do you contact me?
           <motion.div
             style={{ scale }}
             className=" bg-white w-[250vh] h-[250vh] absolute rounded-full"
@@ -43,12 +45,15 @@ const SpecialGift = () => {
             pauseOnHover={false}
           />
         </h1>
-        <h1 className=" mt-3 italic">
-          15.01.26 19:30 at&nbsp;
-          <span className="font-semibold not-italic">
-            Dopamine Bakehouse & Cafe
-          </span>
-        </h1>
+
+        <div className="flex text-xl gap-1 mt-2">
+          <a href="https://github.com/thesimpanze" target="_blank">
+            <FiGithub />
+          </a>
+          <a href="https://linkedin.com/in/rasyid-nuruddin" target="_blank">
+            <TiSocialLinkedin />
+          </a>
+        </div>
       </div>
     </div>
   );
