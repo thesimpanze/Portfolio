@@ -63,7 +63,7 @@ const Break = () => {
       <div className="h-[100vh] flex justify-center items-center sticky top-0 bg-white -z-10">
         <motion.h1
           initial={{ opacity: 1 }}
-          className="font-black text-5xl flex gap-2 text-center"
+          className="font-black text-5xl flex gap-2 text-center flex-wrap justify-center items-center"
         >
           <span className="word-welcome">Have</span>
           <span className="word-to ">you</span>
