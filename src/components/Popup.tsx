@@ -9,7 +9,7 @@ const Popup = () => {
     offset: ["start center", "end end"],
   });
 
-  const width = useTransform(scrollYProgress, [0.3, 0.5], ["30%", "100%"]);
+  const width = useTransform(scrollYProgress, [0.3, 0.5], ["25%", "100%"]);
   const height = useTransform(scrollYProgress, [0.3, 0.5], ["30%", "100vh"]);
 
   return (
