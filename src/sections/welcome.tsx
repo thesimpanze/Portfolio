@@ -26,7 +26,7 @@ const Welcome = () => {
         )}
       </AnimatePresence>
       <div className="h-full w-full flex justify-center items-center ">
-        <div className="flex flex-col justify-center items-center h-full text-white text-[15rem] font-bold font-playfair ">
+        <div className="flex flex-col justify-center items-center h-full text-white md:text-[15rem] text-6xl font-bold font-playfair ">
           <h1 className="m-0 leading-none">Rasyid's</h1>
           <span className="leading-none relative ">Portfolio</span>
         </div>

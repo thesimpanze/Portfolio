@@ -15,8 +15,11 @@ const SpecialGift = () => {
   return (
     <div className="">
       <div className="h-[150vh] bg-primary relative" ref={ref}>
-        <div className="h-screen flex items-center justify-center text-white text-5xl font-bold leading-2 sticky top-0 overflow-hidden">
+        <div className="h-screen flex items-center justify-center text-white text-3xl md:text-5xl font-bold leading-2 sticky top-0 overflow-hidden ">
+          <h1 className="text-wrap flex flex-wrap">
+
           How do you contact me?
+          </h1>
           <motion.div
             style={{ scale }}
             className=" bg-white w-[250vh] h-[250vh] absolute rounded-full"
@@ -24,7 +27,7 @@ const SpecialGift = () => {
         </div>
       </div>
       <div className="h-screen bg-white flex items-center justify-center flex-col text-primary">
-        <h1 className="font-semibold text-2xl  leading-none">
+        <h1 className="font-semibold md:text-2xl text-xl  leading-none">
           <BlurText
             text="Get in touch."
             animateBy="words"
@@ -32,7 +35,7 @@ const SpecialGift = () => {
             threshold={1}
           />
         </h1>
-        <h1 className="font-bold text-9xl font-playfair  italic leading-none">
+        <h1 className="font-bold md:text-9xl text-4xl font-playfair  italic leading-none">
           <ShinyText
             text="Let's Collaborate"
             speed={3}

@@ -86,7 +86,7 @@ const ContentList = () => {
   return (
     <div className="h-[100vh] bg-primary">
       <div className="flex font-grotesk justify-center items-center gap-10 h-full text-white text-center font-black relative">
-        <h1 ref={ref} className="text-9xl tracking-tight flex">
+        <h1 ref={ref} className="md:text-9xl text-6xl tracking-tight flex">
           {WORD.split("").map((char, i) => (
             <span
               key={i}
