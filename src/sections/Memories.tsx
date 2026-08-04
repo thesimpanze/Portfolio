@@ -68,50 +68,35 @@ const Memories = () => {
 
   const active = memories[activeIdx] ?? memories[0];
 
+  const CARD_W = 640;
+  const CARD_H = 360;
+
   return (
     <div className="w-full h-full">
-      <div className="flex justify-center w-full">
-        {/* LEFT: dynamic text panel */}
-        <div className="w-[100vw] flex flex-col justify-center ml-5">
-          <div
-            style={{
-              transition: "opacity 0.3s ease, transform 0.3s ease",
-              opacity: visible ? 1 : 0,
-              transform: visible ? "translateY(0)" : "translateY(12px)",
-            }} className=""
-          >
-            <span className="text-8xl font-black font-grotesk">
-              {active.title}.
-            </span>
-            <span className="mt-4 font-grotesk font-semibold block">
-              {active.description}
-            </span>
-          </div>
-          <button className="w-fit mt-5 px-1.5 py-0.5 border-2 font-semibold text-black cursor-pointer font-playfair">
-            See detail
-          </button>
-        </div>
+      {/* Desktop: flex-row | Mobile: flex-col (card atas, teks bawah) */}
+      <div className="flex flex-col lg:flex-row-reverse items-center justify-center w-full h-full md:gap-16 px-6 py-10 ">
 
-        {/* RIGHT: card stack */}
+        {/* Card stack — ukuran eksplisit, pb besar agar stack 3D tidak overlap teks */}
         <div
-          style={{ height: "100vh", position: "relative" }}
-          className="w-full flex items-center  justify-center -translate-y-1/6"
+          className="relative flex-shrink-0 overflow-visible scale-[0.5] sm:scale-75 lg:scale-100"
+          style={{ width: CARD_W, height: CARD_H }}
         >
           <CardSwap
             cardDistance={60}
             verticalDistance={70}
+            width={CARD_W}
+            height={CARD_H}
             delay={5000}
             pauseOnHover={false}
             onActiveIndexChange={handleActiveChange}
           >
             {memories.map((mem, i) => (
               <Card key={i}>
-                {/* <h1 className="pl-5">{mem.title}</h1> */}
                 <div
                   style={{
                     backgroundImage: `url(${mem.image})`,
                     backgroundSize: "cover",
-                    backgroundPosition: "",
+                    backgroundPosition: "center",
                     width: "100%",
                     height: "100%",
                     borderRadius: "inherit",
@@ -122,6 +107,28 @@ const Memories = () => {
             ))}
           </CardSwap>
         </div>
+
+        {/* Dynamic text panel */}
+        <div className="flex flex-col justify-center max-w-lg  w-screeen">
+          <div
+            style={{
+              transition: "opacity 0.3s ease, transform 0.3s ease",
+              opacity: visible ? 1 : 0,
+              transform: visible ? "translateY(0)" : "translateY(12px)",
+            }}
+          >
+            <span className="text-6xl lg:text-8xl font-black font-grotesk block">
+              {active.title}.
+            </span>
+            <span className="mt-4 font-grotesk font-semibold block text-sm lg:text-base">
+              {active.description}
+            </span>
+          </div>
+          <button className="w-fit mt-5 px-1.5 py-0.5 border-2 font-semibold text-black cursor-pointer font-playfair">
+            See detail
+          </button>
+        </div>
+
       </div>
     </div>
   );
