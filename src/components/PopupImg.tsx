@@ -4,7 +4,7 @@ const PopupImg = ({ isVisible }: { isVisible: (value: boolean) => void }) => {
       className="fixed h-screen w-screen justify-center items-center top-0 left-0 flex z-50 "
       onClick={() => isVisible(false)}
     >
-      <div className=" bg-white w-1/3 h-fit rounded-lg p-3 pt-4 flex flex-col gap-2">
+      <div className=" bg-white md:w-1/3 w-4/5 h-fit rounded-lg p-3 pt-4 flex flex-col gap-2">
         <span className="text-lg">Preface</span>
         <span>
           I’m an Informatics Engineering student at Politeknik Elektronika
